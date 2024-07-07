@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.App {
+  border: solid;
+  border-radius: 1em;
+  user-select: none;
+  max-height: 100vh;
+  /* padding: 10px; */
+}
+
+.config {
+  margin: 20px;
+}
+
+.Fields {
+  margin: 10px;
+  display: grid;
+  /* gap: 10px; */
+}
+
+.Field {
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 0em;
+  margin: 10px;
+  /* will-change: filter; */
+  /* transition: filter 300ms; */
+}
+.current {
+  filter: drop-shadow(0 0 1em #4375c6aa);
+  /* animation: shake 0.3s linear 2; */
+}
+.selected {
+  /* border: 1px solid red; */
+  /* filter: drop-shadow(0 0 1em #4375c6aa); */
+  animation: shake 0.3s linear 2;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+   25% { transform: rotate(10deg); }
+   50% { transform: rotate(0deg); }
+   75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.Field:hover {
+  border-color: #4375c6aa;
+  /* filter: drop-shadow(0 0 1em #4375c6aa); */
+  /* animation: shake 0.3s linear 2; */
+}
+
+.stats {
+  color: gray;
+}
+.stat {
+  font-weight: bold;
+}
+
+.lines {
+  position: absolute;
+  z-index: -1;
+  top: 0; left: 0;
+  stroke-width: 1.8em;
+  stroke: red;
+  stroke-linecap: round;
+  stroke-opacity: 80%;
+}
